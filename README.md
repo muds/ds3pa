@@ -30,3 +30,14 @@ This will produce a sequence of progress reports, such as
 The results can then be saved to a text file for storage or transmission,
 
     > write.table(tidy.set, 'tidyset.txt')
+
+## Additional documentation
+
+The source code within the `run_analysis.R` script contains further
+documentation in the form of code comments and function-description blocks.
+
+## Code book
+
+A description of the variables in the output, as well as the process undergone
+to create the data, can be found in the included `codebook.md` in this
+repository.
