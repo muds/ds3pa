@@ -15,25 +15,21 @@
 #   measurements for a single subject and a single activity.
 #
 # Input:
-#   `zipfile` (optional, character) -
-#     Location of the .zip archive containing the Samsung data.
-#     Defaults to the provided value of,
-#       'getdata-projectfiles-UCI HAR Dataset.zip'
-#   `progress.reports` (optional, logical) -
-#     Whether or not to display messages containing progress updates
-#     as the various steps of the process are performed.
-#     Default is TRUE (i.e. messages will be shown).
+#   None
 #
 # Output:
 #   Returns a data.frame object containing average mean and average
 #   standard deviation for each of the measured properties, over each
 #   subject's performance of each activity.
-tidyDataFromZip <- function (
-  zipfile = 'getdata-projectfiles-UCI HAR Dataset.zip',
-  progress.reports = T
-) {
+tidyDataFromZip <- function () {
   # Record the initial start time, to determine elapsed time when finished
   start.time = Sys.time()
+  
+  # Specify the file from which to extract and load the Samsung data
+  zipfile = 'getdata-projectfiles-UCI HAR Dataset.zip'
+  # Specify that we would like to see progress reports through the process
+  progress.reports = T
+  
   
   # Define two 'helper' functions that are used repeatedly during the process
   
@@ -190,4 +186,3 @@ tidyDataFromZip <- function (
   
   agg
 }
-
